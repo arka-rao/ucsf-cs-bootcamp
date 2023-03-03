@@ -1,0 +1,37 @@
+def main():
+    #Establish input string variables and two empty string variables for the complement and reverse
+    DNA = "GATATGCTTCCACATTACATAGCTGTGATAGGCCCGTCTGCAGGAGAGGCACTACAGTTGAGTTCACCCCCAATCAATGGAAGACTCCCGGATCAAACCCTCGAATGTCGCAGGGGGCGGGAACTGTGCCACTACTTATGTACTGTCCTATGCACAATCACTGTCCATCTCTACTCACTCAAGAACTGACGCTAGGGTTGCTCGACCATTCTCTGCCTGGTGCGCTCGCAACCGTCAGGGATTGTTGCTCGCATTTTAAAGCTAAAGTAAACTGGTGCCACAGAGTGCGGTTATTGGACCTTGCGGGATATAAGGTCCTGGCGTTTCGGCACCTGAATAGAGAAAACAATCAAGCGTATGCCCTTAAATCGATAAACATAGGTAAGAAGGTTTAATTGCGCAGAAGACAGATGGAAGGGTGCGCACCCAGACGAGTAAGTGTTGAAGCTCAGCCTATGCAATCCGTGCAGCAGGAAGACACGGCAGTGTTGAAAAAAAAGCAAGTCGTCTGTAAAGATGAATGAGCACATTCTGCAGATACGAACTTTAGTGTTATACCCATGCCGGTGGCAATCCTGTTACGGCGGTGCAGGCATCGGAGATAACCGGTTTCTTTGCGCGGGAAAAATGGCGCATCAAGGATCGCCGCAGAGACGACTGTTGACCCCTTAAGTAGGCGCACGGTCAGTACGATAGAACGCCCAGAACGCCTGCGCGAGACCTGAAAACATGATACGGTACATACATGAAGCTCGAAGCGGTAGCATTCAAGCCGGCTATAAATTGCCTTGAGCAACAGCTTCGCTAAGAAGC"
+    complement = ""
+    reverse = ""
+
+    #Build forloop that builds the complement string
+    for i in DNA:
+        if i == "A":
+            complement += "T"
+        elif i == "T":
+            complement += "A"
+        elif i == "C":
+            complement += "G"
+        elif i == "G":
+            complement += "C"
+        else:
+            continue 
+    
+    #Print to bugtest program
+    print "DNA: " + DNA
+    print "complement: " + complement
+
+    #Build forloop that starts at the end of the complement string and builds a new string in reverse
+    counter = -1
+
+    for i in complement:
+        reverse += complement[counter]
+        counter += -1
+    
+    #Print desired output
+    print "reverse: " + reverse 
+
+
+
+
+main()
